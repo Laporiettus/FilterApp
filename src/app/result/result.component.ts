@@ -13,7 +13,8 @@ import {map} from 'rxjs/operators';
 })
 export class ResultComponent implements OnInit {
   public itemArray$: Observable<ItemModel[]>;
-  rowDefs: string[] = ['name', 'type'];
+  public rowDefs: string[] = ['name', 'type'];
+  
   constructor(
     public itemService: ItemService,
     private route: ActivatedRoute,
