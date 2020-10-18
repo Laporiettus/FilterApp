@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="search-block">
+      <mat-form-field appearance="fill">
+        <mat-label>Имя</mat-label>
+        <input matInput [(ngModel)]="nameFilter" placeholder="Процессор..." >
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Тип</mat-label>
+        <input matInput [(ngModel)]="typeFilter" placeholder="Запчасти...">
+      </mat-form-field>
+      <button mat-raised-button color="primary"
+              [routerLink]="['/']"
+              [queryParams]="{ name: nameFilter, type: typeFilter }"
+      >Найти</button>
+  </div>
+
+</div>
